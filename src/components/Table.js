@@ -25,18 +25,22 @@ class Table extends Component {
             expenses.length === 0
               ? <tr />
               : (
-                expenses.map((e, i) => (
-                  <tr key={ i }>
-                    <td>{ e.description }</td>
-                    <td>{ e.tag }</td>
-                    <td>{ e.method }</td>
-                    <td>{ e.currency }</td>
-                    <td>{ e.description }</td>
-                    <td>{ e.description }</td>
-                    <td>{ e.description }</td>
-                    <td>{ e.description }</td>
-                  </tr>
-                ))
+                expenses.map((e, i) => {
+                  const nomeDaMoeda = e.exchangeRates[e.currency].name;
+                  const cambio = Number(e.exchangeRates[e.currency].ask);
+                  return (
+                    <tr key={ i }>
+                      <td>{ e.description }</td>
+                      <td>{ e.tag }</td>
+                      <td>{ e.method }</td>
+                      <td>{ Number(e.value).toFixed(2) }</td>
+                      <td>Real</td>
+                      <td>{ cambio.toFixed(2) }</td>
+                      <td>{ (e.value * cambio).toFixed(2) }</td>
+                      <td>{ nomeDaMoeda }</td>
+                    </tr>
+                  );
+                })
               )
           }
         </tbody>
