@@ -43,22 +43,30 @@ class Login extends React.Component {
     const { validated, email, password } = this.state;
     return (
       <div>
-        <input
-          type="email"
-          data-testid="email-input"
-          placeholder="Email"
-          onChange={ this.handleChange }
-          name="email"
-          value={ email }
-        />
-        <input
-          type="password"
-          name="password"
-          data-testid="password-input"
-          placeholder="Senha"
-          onChange={ this.handleChange }
-          value={ password }
-        />
+        <label htmlFor="inputEmail">
+          { 'Email: ' }
+          <input
+            type="email"
+            data-testid="email-input"
+            id="inputEmail"
+            placeholder="Email"
+            onChange={ this.handleChange }
+            name="email"
+            value={ email }
+          />
+        </label>
+        <label htmlFor="inputPassword">
+          { 'Senha: ' }
+          <input
+            type="password"
+            id="inputPassword"
+            name="password"
+            data-testid="password-input"
+            placeholder="Senha"
+            onChange={ this.handleChange }
+            value={ password }
+          />
+        </label>
         <button
           disabled={ !validated }
           onClick={ this.handleClick }
