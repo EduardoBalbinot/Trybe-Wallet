@@ -35,7 +35,6 @@ class WalletForm extends Component {
       method: metodoPagamentoDespesa,
       tag: categoriaDespesa,
     };
-    console.log(novaDespesa);
     dispatch(saveExpense(novaDespesa));
 
     this.setState({

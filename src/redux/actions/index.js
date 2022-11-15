@@ -45,16 +45,13 @@ export const endSaving = (payload) => ({
 export const saveExpense = (expense) => async (dispatch) => {
   dispatch(startSaving);
   const url = 'https://economia.awesomeapi.com.br/json/all';
-  console.log(url);
   fetch(url)
     .then((response) => response.json())
     .then((json) => {
-      console.log(expense);
-      console.log(json[0]);
       expense.exchangeRates = json;
       dispatch(endSaving(expense));
     })
     .catch((error) => {
-      console.log('Erro mesmo: ', error);
+      console.log('Erro : ', error);
     });
 };
