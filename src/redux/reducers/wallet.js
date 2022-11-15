@@ -5,6 +5,7 @@ const initialState = {
   currencies: [],
   expenseIndex: 0,
   expenses: [],
+  expensesString: '',
   editor: false,
   idToEdit: 0,
   isFetching: false,
