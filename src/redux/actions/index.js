@@ -62,3 +62,10 @@ export const updateExpenses = (updatedExpenses) => ({
   type: UPDATE_EXPENSES,
   payload: updatedExpenses,
 });
+
+export const START_EDITING = 'START_EDITING';
+
+export const startEditing = (idToEdit) => ({
+  type: START_EDITING,
+  payload: idToEdit,
+});

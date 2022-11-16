@@ -3,7 +3,8 @@ import { REQUEST_CURRENCIES,
   GET_CURRENCIES,
   START_SAVING,
   END_SAVING,
-  UPDATE_EXPENSES } from '../actions';
+  UPDATE_EXPENSES,
+  START_EDITING } from '../actions';
 
 const initialState = {
   currencies: [],
@@ -44,7 +45,14 @@ const wallet = (state = initialState, action) => {
   case UPDATE_EXPENSES:
     return {
       ...state,
-      expenses: action.payload,
+      expenses: [...action.payload],
+      editor: false,
+    };
+  case START_EDITING:
+    return {
+      ...state,
+      idToEdit: action.payload,
+      editor: true,
     };
   default:
     return state;

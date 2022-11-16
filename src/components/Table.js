@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { updateExpenses } from '../redux/actions';
+import { updateExpenses, startEditing } from '../redux/actions';
 
 class Table extends Component {
   delete = (id) => {
     const { expenses, dispatch } = this.props;
     const updatedExpenses = expenses.filter((e) => e.id !== id);
     dispatch(updateExpenses(updatedExpenses));
+  };
+
+  ativarFormularioDeEdicao = (idToEdit) => {
+    const { dispatch } = this.props;
+    dispatch(startEditing(idToEdit));
   };
 
   render() {
@@ -46,6 +51,13 @@ class Table extends Component {
                       <td>{ (e.value * cambio).toFixed(2) }</td>
                       <td>{ nomeDaMoeda }</td>
                       <td>
+                        <button
+                          data-testid="edit-btn"
+                          type="button"
+                          onClick={ () => { this.ativarFormularioDeEdicao(e.id); } }
+                        >
+                          Editar
+                        </button>
                         <button
                           data-testid="delete-btn"
                           type="button"
