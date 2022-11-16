@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.loginMainDiv {
+  background-color: rgb(81, 200, 120);
+  background-image: url('https://img.freepik.com/premium-photo/stock-market-forex-trading-graph-graphic-double-exposure_73426-193.jpg?w=2000');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  overflow: auto;
+  padding-bottom: auto;
+  padding-top: auto;
+}
+
+.loginForm img {
+  margin-bottom: 40px;
+  max-width: 300px;
+}
+
+.loginForm {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  margin: 25vh auto auto;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.loginForm input {
+  border: 1px solid rgb(0, 59, 229);
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 40px;
+  margin: 5px 0;
+  padding-left: 10px;
+  width: 330px;
+}
+
+.loginForm input::placeholder {
+  color: rgb(0, 59, 229);
+}
+
+.loginForm button {
+  background-color: rgb(0, 59, 229);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  left: 475px;
+  margin: 5px 0;
+  top: 460px;
+  width: 330px;
+}
+
+.loginForm button:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.loginForm input:nth-of-type( 1 ) {
+  animation: slideToRight 0.3s ease-in-out;
+}
+
+.loginForm input:nth-of-type( 2 ) {
+  animation: slideToRight 0.4s ease-in-out;
+}
+
+.loginForm button:nth-of-type( 1 ) {
+  animation: slideToRight 0.5s ease-in-out;
+}
+
+@keyframes slideToRight {
+
+  from {
+    transform: translateX(-150%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and ( max-width : 300px ) {
+
+  .loginForm , .loginForm input , .loginForm button , .loginForm img {
+    max-width: 100%;
+  }
+}

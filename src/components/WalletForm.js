@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { fetchCurrencies, saveExpense, updateExpenses } from '../redux/actions';
+import './WalletForm.css';
 
 class WalletForm extends Component {
   state = {
@@ -83,7 +84,7 @@ class WalletForm extends Component {
     if (isFetching) return (<p>CARREGANDO...</p>);
     if (isSaving) return (<p>SALVANDO...</p>);
     return (
-      <div>
+      <div className="walletFormMainDiv">
         <form>
           <label htmlFor="valorDespesa">
             { 'Valor da despesa: ' }
@@ -147,13 +148,13 @@ class WalletForm extends Component {
               <option>Saúde</option>
             </select>
           </label>
-          <button
-            type="button"
-            onClick={ editor ? this.editarDespesa : this.adicionarDespesa }
-          >
-            { editor ? 'Editar despesa' : 'Adicionar despesa'}
-          </button>
         </form>
+        <button
+          type="button"
+          onClick={ editor ? this.editarDespesa : this.adicionarDespesa }
+        >
+          { editor ? 'Editar despesa' : 'Adicionar despesa'}
+        </button>
       </div>
     );
   }

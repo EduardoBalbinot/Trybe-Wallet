@@ -1,0 +1,48 @@
+.walletFormMainDiv {
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  margin: 0 auto auto;
+  overflow: auto;
+  width: 86%;
+}
+
+.walletFormMainDiv form {
+  color: rgba(0, 59, 229, 1);
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.walletFormMainDiv label {
+  margin-left: 10px;
+}
+
+.walletFormMainDiv input , .walletFormMainDiv select {
+  border: 1px solid rgb(0, 59, 229);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: rgb(0, 59, 229);
+  height: 40px;
+  margin: 5px 0;
+  padding-left: 10px;
+  width: 330px;
+}
+
+.walletFormMainDiv select {
+  max-width: 150px;
+}
+
+.walletFormMainDiv button {
+  background-color: rgba(47, 193, 140, 1);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 40px auto;
+  padding: 15px;
+  width: 300px;
+}

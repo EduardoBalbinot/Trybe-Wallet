@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { saveEmail } from '../redux/actions';
+import './Login.css';
+import trybeWalletLogo from '../images/TrybeWalletLogo.png';
 
 class Login extends React.Component {
   state = {
@@ -42,9 +44,9 @@ class Login extends React.Component {
   render() {
     const { validated, email, password } = this.state;
     return (
-      <div>
-        <label htmlFor="inputEmail">
-          { 'Email: ' }
+      <div className="loginMainDiv">
+        <form className="loginForm">
+          <img src={ trybeWalletLogo } alt="trybe wallet logo" />
           <input
             type="email"
             data-testid="email-input"
@@ -54,9 +56,6 @@ class Login extends React.Component {
             name="email"
             value={ email }
           />
-        </label>
-        <label htmlFor="inputPassword">
-          { 'Senha: ' }
           <input
             type="password"
             id="inputPassword"
@@ -66,14 +65,14 @@ class Login extends React.Component {
             onChange={ this.handleChange }
             value={ password }
           />
-        </label>
-        <button
-          disabled={ !validated }
-          onClick={ this.handleClick }
-          type="button"
-        >
-          Entrar
-        </button>
+          <button
+            disabled={ !validated }
+            onClick={ this.handleClick }
+            type="button"
+          >
+            Entrar
+          </button>
+        </form>
       </div>
     );
   }

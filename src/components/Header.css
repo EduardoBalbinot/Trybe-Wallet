@@ -1,0 +1,38 @@
+.headerMainDiv {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto auto;
+  width: 86%;
+}
+
+.headerMainDiv div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 33%;
+}
+
+.headerMainDiv .tbLogo {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.headerMainDiv .totalLogo {
+  width: 50px;
+}
+
+.headerMainDiv p {
+  overflow-wrap: break-word;
+}
+
+.headerMainDiv .despesaTotal {
+  color: rgb(0, 59, 229);
+}
+
+.headerMainDiv .email {
+  color: rgb(47, 193, 140);
+}

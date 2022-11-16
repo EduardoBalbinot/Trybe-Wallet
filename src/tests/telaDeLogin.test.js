@@ -6,18 +6,18 @@ import App from '../App';
 describe('tela de login', () => {
   it('testa se existe um campo para email', () => {
     renderWithRouterAndRedux(<App />);
-    const inputEmail = screen.getByLabelText(/Email:/);
+    const inputEmail = screen.getByTestId('email-input');
     expect(inputEmail).toBeInTheDocument();
   });
   it('testa se existe um campo para senha', () => {
     renderWithRouterAndRedux(<App />);
-    const inputPassword = screen.getByLabelText(/Senha:/);
+    const inputPassword = screen.getByTestId('password-input');
     expect(inputPassword).toBeInTheDocument();
   });
   it('testa se o usuario é redirecionado para a pagina da carteira', () => {
     renderWithRouterAndRedux(<App />);
-    const inputEmail = screen.getByLabelText(/Email:/);
-    const inputPassword = screen.getByLabelText(/Senha:/);
+    const inputEmail = screen.getByTestId('email-input');
+    const inputPassword = screen.getByTestId('password-input');
     const button = screen.getByRole('button', { name: /entrar/i });
     const email = '914@thepro@gmail.com';
     const senha = '1234356';
