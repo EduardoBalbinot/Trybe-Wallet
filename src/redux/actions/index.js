@@ -55,3 +55,10 @@ export const saveExpense = (expense) => async (dispatch) => {
       console.log('Erro : ', error);
     });
 };
+
+export const UPDATE_EXPENSES = 'UPDATE_EXPENSES';
+
+export const updateExpenses = (updatedExpenses) => ({
+  type: UPDATE_EXPENSES,
+  payload: updatedExpenses,
+});
