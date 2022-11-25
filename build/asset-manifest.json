@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.21db449c.css",
+    "main.js": "./static/js/main.92b164e6.js",
+    "static/media/TrybeWalletLogo.png": "./static/media/TrybeWalletLogo.03e223405764d0faaaca.png",
+    "index.html": "./index.html",
+    "main.21db449c.css.map": "./static/css/main.21db449c.css.map",
+    "main.92b164e6.js.map": "./static/js/main.92b164e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21db449c.css",
+    "static/js/main.92b164e6.js"
+  ]
+}
