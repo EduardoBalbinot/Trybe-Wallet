@@ -11,6 +11,10 @@ describe('testa a tela da carteira', () => {
     global.fetch = jest.fn(() => Promise.resolve({
       json: () => Promise.resolve(mockData),
     }));
+
+    // global.fetch = jest.fn().mockResolvedValue({
+    //   json: jest.fn().mockResolvedValue(mockData),
+    // });
   });
 
   afterEach(() => {

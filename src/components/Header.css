@@ -17,8 +17,7 @@
 
 .headerMainDiv .tbLogo {
   display: block;
-  margin: 0 auto;
-  max-width: 300px;
+  max-width: 250px;
 }
 
 .headerMainDiv .totalLogo {
@@ -35,4 +34,12 @@
 
 .headerMainDiv .email {
   color: rgb(47, 193, 140);
+}
+
+
+@media only screen and ( max-width : 892px ) {
+
+  .headerMainDiv {
+    flex-direction: column;
+  }
 }

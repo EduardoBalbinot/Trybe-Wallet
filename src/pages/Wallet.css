@@ -1,4 +1,4 @@
-.walletMainDiv {
+/* .walletMainDiv {
   background-color: rgb(81, 200, 120);
   background-image: url('https://img.freepik.com/premium-photo/stock-market-forex-trading-graph-graphic-double-exposure_73426-193.jpg?w=2000');
   background-position: center;
@@ -7,4 +7,14 @@
   overflow: auto;
   padding-bottom: auto;
   padding-top: auto;
+  pointer-events: none;
+  position: absolute;
+  z-index: -2;
+} */
+
+body {
+  background-image: url('https://img.freepik.com/premium-photo/stock-market-forex-trading-graph-graphic-double-exposure_73426-193.jpg?w=2000');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }

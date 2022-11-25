@@ -81,8 +81,8 @@ class WalletForm extends Component {
       metodoPagamentoDespesa,
       categoriaDespesa,
     } = this.state;
-    if (isFetching) return (<p>CARREGANDO...</p>);
-    if (isSaving) return (<p>SALVANDO...</p>);
+    if (isFetching) return (<div className="walletFormMainDiv"><p>CARREGANDO</p></div>);
+    if (isSaving) return (<div className="walletFormMainDiv"><p>SALVANDO...</p></div>);
     return (
       <div className="walletFormMainDiv">
         <form>

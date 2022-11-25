@@ -2,9 +2,14 @@
   background-color: white;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  left: 0;
   margin: 0 auto auto;
-  overflow: auto;
+  min-height: 280px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
   width: 86%;
+  z-index: 10;
 }
 
 .walletFormMainDiv form {
@@ -14,10 +19,6 @@
   font-weight: 700;
   justify-content: space-evenly;
   margin-top: 50px;
-}
-
-.walletFormMainDiv label {
-  margin-left: 10px;
 }
 
 .walletFormMainDiv input , .walletFormMainDiv select {
@@ -45,4 +46,63 @@
   margin: 40px auto;
   padding: 15px;
   width: 300px;
+}
+
+.walletFormMainDiv label:nth-of-type( 1 ) {
+  animation: slideToRight 0.5s ease-in-out;
+}
+
+.walletFormMainDiv label:nth-of-type( 2 ) {
+  animation: slideToRight 0.55s ease-in-out;
+}
+
+.walletFormMainDiv label:nth-of-type( 3 ) {
+  animation: slideToRight 0.6s ease-in-out;
+}
+
+.walletFormMainDiv label:nth-of-type( 4 ) {
+  animation: slideToRight 0.65s ease-in-out;
+}
+
+.walletFormMainDiv label:nth-of-type( 5 ) {
+  animation: slideToRight 0.7s ease-in-out;
+}
+
+.walletFormMainDiv button:nth-of-type( 1 ) {
+  animation: slideToRight 0.75s ease-in-out;
+}
+
+
+@keyframes slideToRight {
+
+  from {
+    transform: translateX(-1100px);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+@media only screen and ( max-width : 500px ) {
+
+  .walletFormMainDiv form {
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .walletFormMainDiv input {
+    width: 100%;
+  }
+
+  .walletFormMainDiv select {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .walletFormMainDiv button {
+    width: 80%;
+  }
 }
